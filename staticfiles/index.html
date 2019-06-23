@@ -10,10 +10,14 @@
         <link rel="icon" type="image/icon" href="assets/images/tabicon.ico">
 
         <link rel="stylesheet" type="text/css" href="">
+
+       {% load static %} 
         <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet">
         <link href="{% static 'assets/css/bootstrap-theme.min.css' %}" rel="stylesheet">
         <link href="{% static 'assets/css/font-awesome.min.css' %}" rel="stylesheet">
         <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,700i" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Crimson+Text:400,700,700i|Josefin+Sans:700" rel="stylesheet">
         <link rel="icon" href="{% static 'assets/images/logo.png' %}">
        
         
@@ -28,6 +32,7 @@
                     </div>
                     <div id = "index_right" class="col-md-6 text-center right">
                         <div class="logo">
+                            {% load static %}
                             <img src="{% static 'assets/images/logo.png' %}">
                             <h4>I am rabbit</h4>
                         </div>
@@ -56,6 +61,7 @@
                 <div class="row">
                     <div class="col-md-6 left" id="about_left">
 
+                        {% load static %}
                         <img class="img-responsive img-rabbit" src="{% static 'assets/images/about.jpg' %}">
                     </div>
 
@@ -105,7 +111,7 @@
             <div class="container main">
                 <div class="row">
                     <div class="col-md-6 left" id="contact_left">
-                        <img class="img-responsive img-rabbit" src="assets/images/contact.jpg">
+                        <img class="img-responsive img-rabbit" src="{% static 'assets/images/contact.jpg' %}">
                     </div>
 
                     <div class="col-md-6 right" id="contact_right">
@@ -146,8 +152,9 @@
             </footer>
             
         </div>                                                              <!-- Contact ends here -->
-        
 
+        {% load static %}        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
         <script src="{% static 'assets/js/script.js' %}"></script>
     </body>
