@@ -1,4 +1,4 @@
-#!/home/kxn/Repos/resumeSite/myenv/bin/python
+#!/home/kxn/Repos/resumeSite/myenv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys

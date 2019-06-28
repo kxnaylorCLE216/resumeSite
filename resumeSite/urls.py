@@ -17,9 +17,16 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path
 from django.views. generic import *
+from datetime import datetime
+
 
 class Home(TemplateView):
     template_name = "index.html"
+
+    def get_context_data(self, **kwargs):
+        kwargs['right_now'] = datetime.now().strftime("%H:%M:%S %Z")
+        kwargs['right_user'] = self.request.user
+        return kwargs
 
 urlpatterns = [
     path('admin/', admin.site.urls),
